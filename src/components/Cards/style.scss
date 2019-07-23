@@ -1,0 +1,117 @@
+.stack-container {
+    width: 460px;
+    height: 310px;
+    position: absolute;
+    left: 182px;
+    transition: opacity 0.5s ease-out, visibility 0.5s ease-out, top 0.5s ease-out, transform 0.5s ease-out;
+    opacity: 1;
+    visibility: visible;
+
+    .back-card {
+        width: 460px;
+        height: 310px;
+        background-color: #FFF;
+        position: absolute;
+        border-radius: 12px;
+        -webkit-box-shadow: 0px 0px 50px 0px rgba(0,0,0,0.5);
+        -moz-box-shadow: 0px 0px 50px 0px rgba(0,0,0,0.5);
+        box-shadow: 0px 0px 50px 0px rgba(0,0,0,0.5);
+        transition: transform 0.5s ease-out, top 0.5s ease-out;
+
+        &--one {
+            -ms-transform: rotate(5deg); /* IE 9 */
+            -webkit-transform: rotate(5deg); /* Chrome, Safari, Opera */
+            transform: rotate(5deg);
+            top: 0;
+        }
+
+        &--two {
+            -ms-transform: rotate(-4deg); /* IE 9 */
+            -webkit-transform: rotate(-4deg); /* Chrome, Safari, Opera */
+            transform: rotate(-4deg);
+            top: 0;
+        }
+    }
+
+    .card {
+        background-color: #89C900;
+        width: 460px;
+        height: 310px;
+        position: absolute;
+        border-radius: 12px;
+        font-size: 22px;
+        -webkit-box-shadow: 0px 0px 50px 0px rgba(0,0,0,0.5);
+        -moz-box-shadow: 0px 0px 50px 0px rgba(0,0,0,0.5);
+        box-shadow: 0px 0px 50px 0px rgba(0,0,0,0.5);
+    }
+
+    &--JuniorJacks {
+        top: 610px;
+        -ms-transform: rotate(0deg); /* IE 9 */
+        -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+        transform: rotate(0deg);
+
+        .card {
+            background-image: url('../../assets/images/junior-jacks-card-no-shadow.png');
+            background-size: 460px 310px;
+        }
+
+        &.selected-stack {
+            top: 160px;
+            -ms-transform: rotate(-5deg); /* IE 9 */
+            -webkit-transform: rotate(-5deg); /* Chrome, Safari, Opera */
+            transform: rotate(-5deg);
+
+            .back-card {
+
+                &--one {
+                    -ms-transform: rotate(10deg); /* IE 9 */
+                    -webkit-transform: rotate(10deg); /* Chrome, Safari, Opera */
+                    transform: rotate(10deg);
+                    top: 70px;
+                }
+
+                &--two {
+                    -ms-transform: rotate(5deg); /* IE 9 */
+                    -webkit-transform: rotate(5deg); /* Chrome, Safari, Opera */
+                    transform: rotate(5deg);
+                    top: 35px;
+                }
+            }
+        }
+    }
+
+    &--adults {
+        top: 160px;
+
+        .card {
+            background-image: url('../../assets/images/adults-card-no-shadow.png');
+            background-size: 460px 310px;
+        }
+
+        &.selected-stack {
+
+            .back-card {
+
+                &--one {
+                    -ms-transform: rotate(10deg); /* IE 9 */
+                    -webkit-transform: rotate(10deg); /* Chrome, Safari, Opera */
+                    transform: rotate(10deg);
+                    top: 70px;
+                }
+
+                &--two {
+                    -ms-transform: rotate(5deg); /* IE 9 */
+                    -webkit-transform: rotate(5deg); /* Chrome, Safari, Opera */
+                    transform: rotate(5deg);
+                    top: 35px;
+                }
+            }
+        }
+    }
+
+    &.not-selected-stack {
+        opacity: 0;
+        visibility: hidden;
+    }
+}

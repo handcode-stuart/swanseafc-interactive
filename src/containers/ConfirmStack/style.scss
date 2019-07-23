@@ -1,0 +1,24 @@
+.confirm-stack-container {
+
+    .quote {
+        font-family: Helvetica;
+        font-size: 18px;
+        color: #FFFFFF;
+        letter-spacing: 1.49px;
+        text-align: center;
+        position: absolute;
+        top: 650px;
+        width: 824px;
+        box-sizing: border-box;
+        padding: 0 150px;
+        transition: 0.5s;
+        transition-delay: 0.5s;
+        opacity: 0;
+        visibility: hidden;
+
+        &.fade-in {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}

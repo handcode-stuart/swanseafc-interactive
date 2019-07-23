@@ -1,0 +1,54 @@
+.question-container, .showing-answer {
+    width: 824px;
+    background-color: #FFF;
+    box-sizing: border-box;
+    padding: 20px;
+    margin-bottom: 25px;
+
+    &__inner-holder {
+        border: 2px solid #DB8A66;
+        box-sizing: border-box;
+        padding: 0 50px;
+        text-align: center;
+        height: 400px;
+        display: flex;
+        align-items: center;
+
+        h3 {
+            font-family: 'KnockoutWelterweight';
+            font-size: 40px;
+            color: #2A2E31;
+            letter-spacing: 2.1px;
+            text-transform: uppercase;
+            text-align: center;
+            width: 100%;
+        }
+    }
+}
+
+.showing-answer {
+
+    &__inner-holder {
+
+        h3 {
+            -ms-transform: rotate(-18deg); /* IE 9 */
+            -webkit-transform: rotate(-18deg); /* Chrome, Safari, Opera */
+            transform: rotate(-18deg);
+        }
+    }
+}
+
+.question-answers {
+    animation-name: 'fade-in';
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

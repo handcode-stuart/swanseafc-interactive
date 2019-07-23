@@ -1,0 +1,16 @@
+.frame-container {
+    width: 1080px;
+    height: 1920px;
+    overflow: hidden;
+    position: relative;
+    background-image: url('../../assets/images/kiosk-frame-qr-no-shadow.png');
+    background-size: 1080px 1920px;
+    background-color: #2A2E31;
+}
+
+.leroy-image {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 0;
+}

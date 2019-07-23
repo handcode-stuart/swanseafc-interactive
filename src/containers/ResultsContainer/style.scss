@@ -1,0 +1,87 @@
+.results-container {
+    text-align: center;
+    box-sizing: border-box;
+    padding-top: 190px;
+    animation-name: 'fade-in';
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+
+    &__yay {
+        font-family: 'KnockoutJuniorWelterwt';
+        font-size: 60px;
+        color: #DB8A66;
+        letter-spacing: 2.32px;
+        text-transform: uppercase;
+    }
+
+    &__congratulations {
+        font-family: 'KnockoutJuniorWelterwt';
+        font-size: 40px;
+        color: #9B9B9B;
+        letter-spacing: 2.32px;
+        text-transform: uppercase;
+        padding: 0 200px 50px;
+    }
+
+    &__score-holder {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+
+        &-col-one {
+            width: 260px;
+            text-align: right;
+        }
+
+        &-col-two {
+            width: 260px;
+            text-align: left;
+        }
+
+        .results-container__break {
+            width: 2px;
+            height: 50px;
+            background-color: #000;
+        }
+
+        .results-container__rounds {
+            font-family: 'KnockoutJuniorWelterwt';
+            font-size: 55px;
+            letter-spacing: 2.32px;
+            color: #FFF;
+            padding-right: 60px;
+        }
+
+        .results-container__rounds--green {
+            font-family: 'KnockoutJuniorWelterwt';
+            font-size: 55px;
+            letter-spacing: 2.32px;
+            color: #FFF;
+            color: #9BDA6D;
+        }
+
+        .results-container__total-score {
+            font-family: 'KnockoutJuniorWelterwt';
+            font-size: 55px;
+            letter-spacing: 2.32px;
+            color: #FFFFFF;
+            padding-left: 60px;
+        }
+
+        .results-container__total-score-small {
+            font-family: 'KnockoutJuniorWelterwt';
+            font-size: 30px;
+            letter-spacing: 2.32px;
+            color: rgba(255,255,255,0.25);
+        }
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,176 @@
+@import 'fonts';
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+button:focus {
+    outline: 0;
+}
+
+.btn {
+    background: #2A2E31;
+    border: 2px solid #FFFFFF;
+    box-shadow: 0 0 8px 6px rgba(0,0,0,0.50);
+    padding: 14px 30px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 22px;
+
+    &--answer {
+        font-family: 'KnockoutWelterweight';
+        text-transform: uppercase;
+        font-size: 40px;
+        color: #FFFFFF;
+        letter-spacing: 2.1px;
+        height: 70px;
+        width: 500px;
+        margin-left: 162px;
+        margin-top: 20px;
+        position: relative;
+
+        &.correct-answer {
+            border-color: #7BD951;
+        }
+
+        &.wrong-answer {
+            border-color: #FF4459;
+        }
+
+        &.user-correct {
+
+            &.correct-answer {
+                animation-name: 'correct-answer--right';
+                animation-duration: 0.5s;
+                animation-fill-mode: forwards;
+            }
+
+            &.wrong-answer {
+                animation-name: 'correct-answer--wrong';
+                animation-duration: 0.5s;
+                animation-fill-mode: forwards;
+            }
+        }
+
+        &.user-incorrect {
+
+            &.correct-answer {
+
+            }
+
+            &.wrong-answer {
+                animation-name: 'incorrect-answer--wrong';
+                animation-duration: 1s;
+                animation-fill-mode: forwards;
+                animation-timing-function: ease-in;
+            }
+        }
+    }
+
+    &--start {
+        font-family: Helvetica;
+        font-weight: 100;
+        background: #DB8A66;
+        box-shadow: 0 0 8px 2px rgba(0,0,0,0.50);
+        border: none;
+        color: #FFF;
+        text-transform: uppercase;
+        height: 70px;
+        width: 500px;
+        position: absolute;
+        top: 850px;
+        left: 162px;
+        transition: 0.5s;
+        transition-delay: 0.5s;
+        opacity: 0;
+        visibility: hidden;
+
+        &.fade-in {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    &--restart {
+        font-family: 'KnockoutJuniorWelterwt';
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 20px;
+        color: #FFFFFF;
+        letter-spacing: 2.32px;
+        border-color: #DB8A66;
+        position: absolute;
+        bottom: -93px;
+        left: 350px;
+    }
+}
+
+// Junior Jacks font alts
+.junior-jacks-font {
+    font-family: 'Komikax' !important;
+}
+
+.junior-jacks-answer-font {
+    font-family: 'Komikax' !important;
+    font-size: 30px;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes incorrect-answer--wrong {
+    0% {
+        -ms-transform: rotate(0deg); /* IE 9 */
+        -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+        transform: rotate(0deg);
+    }
+    25% {
+        -ms-transform: rotate(5deg); /* IE 9 */
+        -webkit-transform: rotate(5deg); /* Chrome, Safari, Opera */
+        transform: rotate(5deg);
+    }
+    50% {
+        top: 0;
+    }
+    100% {
+        top: 500px;
+            -ms-transform: rotate(5deg); /* IE 9 */
+            -webkit-transform: rotate(5deg); /* Chrome, Safari, Opera */
+            transform: rotate(5deg);
+    }
+}
+
+@keyframes correct-answer--right {
+    0% {
+        -ms-transform: scale(1); /* IE 9 */
+        -webkit-transform: scale(1); /* Chrome, Safari, Opera */
+        transform: scale(1);
+    }
+    100% {
+        -ms-transform: scale(1.1); /* IE 9 */
+        -webkit-transform: scale(1.1); /* Chrome, Safari, Opera */
+        transform: scale(1.1);
+    }
+}
+
+@keyframes correct-answer--wrong {
+    0% {
+        -ms-transform: scale(1); /* IE 9 */
+        -webkit-transform: scale(1); /* Chrome, Safari, Opera */
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        -ms-transform: scale(0.9); /* IE 9 */
+        -webkit-transform: scale(0.9); /* Chrome, Safari, Opera */
+        transform: scale(0.9);
+        opacity: 0.2;
+    }
+}
